@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var pChordsScale = document.createElement("p");
     var akorler = akorDizisi[secilenTon + secilenMod];
     var akorlerText = "Chords: " + akorler.join(", ");
-    pChordsScale.textContent = chordsScaleText + " | " + akorlerText;
+    pChordsScale.textContent = akorlerText;
     chordsScaleDiv.appendChild(pChordsScale);
   }
 
