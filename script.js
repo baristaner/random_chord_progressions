@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
       akorler = akorDizisi[ton + "phrygian"];
     } else if (mod === "dorian") {
       akorler = akorDizisi[ton + "dorian"];
+    } else if (mod === "mixolydian") {
+      akorler = akorDizisi[ton + "mixolydian"];
     } else {
       console.error("Geçersiz ton veya mod seçimi.");
       return progressionlar;
@@ -92,11 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
       sonucDiv.appendChild(p);
     }
 
-    var chordsScaleText = "Key: " + secilenTon + " " + secilenMod;
+    var chordsScaleText = secilenMod;
     var pChordsScale = document.createElement("p");
     var akorler = akorDizisi[secilenTon + secilenMod];
     var akorlerText = "Chords: " + akorler.join(", ");
-    pChordsScale.textContent = chordsScaleText + " | " + akorlerText;
+    pChordsScale.textContent = akorlerText;
     chordsScaleDiv.appendChild(pChordsScale);
   }
 
